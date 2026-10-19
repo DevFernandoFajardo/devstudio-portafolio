@@ -10,7 +10,7 @@ const CONTACTO = {
     whatsapp: '50255513002',
     email: '',
     linkedin: '',
-    github: 'https://github.com/DevFernandoFajardo',
+    github: '',
     mensajeWhatsapp: 'Hola, vi su página y me interesa cotizar un proyecto.'
 };
 
