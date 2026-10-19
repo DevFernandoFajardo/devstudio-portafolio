@@ -528,6 +528,105 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; text-wrap: balance; }
 .about-text p { color: #cbd5e1; margin-bottom: 16px; max-width: 58ch; }
 .about-text strong { color: var(--text); font-weight: 600; }
 
+.about-more { margin-top: 8px; }
+.about-more i { transition: transform 0.3s var(--ease); }
+.about-more[aria-expanded="true"] i { transform: rotate(180deg); }
+
+/* Panel "Conoce más": experiencia del fundador */
+.experience {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+    padding: clamp(24px, 4vw, 40px);
+    border-radius: var(--radius-lg);
+    position: relative;
+    isolation: isolate;
+}
+
+/* Ángulo animable para que la luz gire alrededor del panel */
+@property --neon-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: true;
+}
+
+.experience {
+    --neon: conic-gradient(
+        from var(--neon-angle),
+        rgba(6, 182, 212, 0.18) 0%,
+        rgba(6, 182, 212, 0.18) 55%,
+        #06b6d4 70%,
+        #a5f3fc 79%,
+        #06b6d4 85%,
+        rgba(6, 182, 212, 0.18) 96%
+    );
+}
+
+/* Resplandor difuso que sigue a la luz (queda por fuera del panel) */
+.experience::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    border-radius: inherit;
+    background: var(--neon);
+    filter: blur(18px);
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Fondo del panel + borde con la luz neón que recorre el contorno */
+.experience::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    border: 2px solid transparent;
+    background:
+        radial-gradient(ellipse 60% 80% at 0% 0%, rgba(6, 182, 212, 0.14), transparent 70%) padding-box,
+        linear-gradient(var(--surface), var(--surface)) padding-box,
+        var(--neon) border-box;
+    pointer-events: none;
+}
+
+.experience[hidden] { display: none; }
+.experience:not([hidden]) { animation: reveal 0.45s var(--ease), neon-spin 4s linear infinite; }
+
+@keyframes neon-spin {
+    to { --neon-angle: 360deg; }
+}
+
+@keyframes reveal {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.experience-text h3 { font-size: clamp(1.25rem, 2.2vw, 1.5rem); margin-bottom: 14px; }
+.experience-text p { color: #cbd5e1; margin-bottom: 12px; max-width: 54ch; }
+.experience-text p:last-child { margin-bottom: 0; }
+
+.experience-caption { color: var(--muted); font-size: 0.88rem; margin-bottom: 14px; }
+
+.experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+.experience-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: rgba(10, 10, 10, 0.55);
+}
+.experience-list strong { font-size: 1.2rem; font-weight: 600; letter-spacing: -0.01em; }
+.experience-list span { font-size: 0.82rem; color: var(--muted); }
+
 .steps { display: grid; gap: 4px; }
 
 .steps li {
@@ -795,6 +894,7 @@ option { background: var(--bg); color: var(--text); }
 /* --- 13. MÓVIL Y TABLET --- */
 @media (max-width: 960px) {
     .about, .contact { grid-template-columns: 1fr; gap: 40px; }
+    .experience { grid-template-columns: 1fr; gap: 28px; }
 }
 
 @media (max-width: 860px) {

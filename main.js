@@ -90,6 +90,24 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach(section => observer.observe(section));
     }
 
+    /* --- 4b. "Conoce más" en Nosotros --- */
+    const aboutMore = document.getElementById('about-more');
+    const aboutPanel = document.getElementById('about-experiencia');
+    if (aboutMore && aboutPanel) {
+        aboutMore.addEventListener('click', () => {
+            const open = aboutMore.getAttribute('aria-expanded') === 'true';
+            aboutMore.setAttribute('aria-expanded', String(!open));
+            aboutPanel.hidden = open;
+            document.getElementById('about-more-label').textContent = open ? 'Conoce más' : 'Ver menos';
+            if (!open) {
+                const top = aboutPanel.getBoundingClientRect().top;
+                if (top > window.innerHeight * 0.7) {
+                    aboutPanel.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+                }
+            }
+        });
+    }
+
     /* --- 5. Proyectos --- */
     const projects = (typeof PROYECTOS !== 'undefined' && Array.isArray(PROYECTOS)) ? PROYECTOS : [];
     const grid = document.getElementById('projects-grid');
