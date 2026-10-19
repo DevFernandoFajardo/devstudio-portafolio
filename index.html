@@ -3,169 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevStudio | Soluciones Digitales</title>
-    
-    <link rel="icon" type="image/png" href="img/DEVSTUDIO.png">
+    <title>DevStudio | Desarrollo web, sistemas a medida e infraestructura de redes</title>
+    <meta name="description" content="DevStudio desarrolla sitios web, tiendas en línea y sistemas a medida, e instala redes, Wi-Fi y cámaras de seguridad para empresas e instituciones.">
+    <meta name="author" content="Fernando Fajardo">
     <meta name="theme-color" content="#0a0a0a">
-    <meta name="apple-mobile-web-color" content="black-translucent">
+    <link rel="canonical" href="https://devstudio-site.vercel.app/">
 
+    <!-- Vista previa al compartir el enlace (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_LA">
+    <meta property="og:site_name" content="DevStudio">
+    <meta property="og:title" content="DevStudio | Soluciones digitales">
+    <meta property="og:description" content="Sitios web, e-commerce, sistemas a medida e infraestructura de redes.">
+    <meta property="og:url" content="https://devstudio-site.vercel.app/">
+    <meta property="og:image" content="https://devstudio-site.vercel.app/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="img/DEVSTUDIO.png">
+    <link rel="apple-touch-icon" href="img/DEVSTUDIO.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-       (function(){
-          emailjs.init("EDHAUOKWemjL3kogx");
-       })();
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "DevStudio",
+        "url": "https://devstudio-site.vercel.app/",
+        "image": "https://devstudio-site.vercel.app/img/og-image.png",
+        "description": "Desarrollo web, e-commerce, sistemas a medida e infraestructura de redes.",
+        "founder": { "@type": "Person", "name": "Fernando Fajardo" }
+    }
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <div id="animated-bg"></div>
+    <header class="nav-wrap">
+        <nav class="nav-main" aria-label="Principal">
+            <a href="#inicio" class="nav-brand" aria-label="DevStudio, ir al inicio"><b>DEV</b><span>STUDIO</span></a>
 
-    <nav class="nav-main">
-        <div class="nav-brand"><b>DEV</b><span>STUDIO</span></div>
-        <button class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
-        </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
 
-        <ul class="nav-menu">
-            <li><a href="#inicio" class="active">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav> 
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Proyectos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li class="nav-cta-item"><a href="#contacto" class="nav-cta">Cotizar proyecto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-text">
-            <h1>Transformamos tus ideas <span class="highlight">en experiencias digitales</span></h1>
-            
-            <p class="services-list">
-                <span><i class="fa-solid fa-code"></i> Desarrollo Web</span>
-                <span class="separator">•</span>
-                <span><i class="fa-solid fa-cart-shopping"></i> E-commerce</span>
-                <span class="separator">•</span>
-                <span><i class="fa-solid fa-mobile-screen"></i> Aplicaciones a medida</span>
-            </p>
-        </div>
-    </section>
-
-    <section id="servicios" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Nuestros <span class="highlight">Servicios</span></h2>
-            <div class="services-grid">
-                
-                <div class="service-card">
-                    <i class="fas fa-code"></i>
-                        <summary><h3>Desarrollo Web</h3></summary>
-                </div>
-
-                <div class="service-card">
-                    <i class="fas fa-shopping-cart"></i>
-                        <summary><h3>E-commerce</h3></summary>
-                </div>
-
-                <div class="service-card">
-                    <i class="fas fa-user-check"></i>
-                        <summary><h3>Gestión Académica (SIS)</h3></summary>
-                </div>
-
-                <div class="service-card">
-                    <i class="fas fa-network-wired"></i>
-                        <summary><h3>Infraestructura de Redes</h3></summary>
-                </div>
-
-                <div class="service-card">
-                    <i class="fas fa-video"></i>
-                        <summary><h3>Cámaras de Seguridad</h3></summary>
-                </div>
-
-                <div class="service-card">
-                    <i class="fas fa-wifi"></i>
-                        <summary><h3>Puntos de Acceso (AP)</h3></summary>
+    <main id="contenido">
+        <section id="inicio" class="hero">
+            <div id="animated-bg" aria-hidden="true"></div>
+            <div class="hero-text">
+                <h1>Transformamos tus ideas <span class="highlight">en experiencias digitales</span></h1>
+                <p class="hero-lead">
+                    Diseñamos y desarrollamos soluciones tecnológicas a la medida de tu negocio:
+                    sitios web, comercio electrónico, sistemas de gestión e infraestructura de red.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn btn-primary">Cotizar proyecto</a>
+                    <a href="#portafolio" class="btn btn-ghost">Ver proyectos</a>
                 </div>
             </div>
-        </div>
-    </section>
+            <a href="#servicios" class="scroll-cue" aria-label="Ir a servicios"><i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+        </section>
 
-    <section id="portafolio" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Nuestro <span class="highlight">Portafolio</span></h2>
-            <div class="loader-container">
-                <div class="tech-loader">
-                    <i class="fas fa-microchip"></i>
-                    <div class="loader-ring"></div>
+        <section id="servicios" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Servicios</h2>
+                    <p>Software e infraestructura con un solo responsable: desde el sistema que usa tu equipo hasta la red que lo conecta.</p>
+                </header>
+
+                <div class="service-groups">
+                    <div class="service-group">
+                        <h3 class="group-title"><i class="fas fa-laptop-code" aria-hidden="true"></i> Software</h3>
+                        <ul class="service-list">
+                            <li class="service-item">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Desarrollo web</h4>
+                                    <p>Sitios corporativos y landing pages rápidas, adaptadas a celular y preparadas para aparecer en Google.</p>
+                                </div>
+                            </li>
+                            <li class="service-item">
+                                <i class="fas fa-cart-shopping" aria-hidden="true"></i>
+                                <div>
+                                    <h4>E-commerce</h4>
+                                    <p>Tiendas en línea con catálogo, control de inventario, gestión de pedidos y pagos en línea.</p>
+                                </div>
+                            </li>
+                            <li class="service-item">
+                                <i class="fas fa-user-graduate" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Sistemas a medida y gestión académica (SIS)</h4>
+                                    <p>Software hecho para tu operación, como sistemas para colegios: notas, asistencia, inscripciones y comunicación con padres.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="service-group">
+                        <h3 class="group-title"><i class="fas fa-server" aria-hidden="true"></i> Infraestructura</h3>
+                        <ul class="service-list">
+                            <li class="service-item">
+                                <i class="fas fa-network-wired" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Redes estructuradas</h4>
+                                    <p>Diseño, cableado y configuración de redes para oficinas y empresas, ordenadas y fáciles de mantener.</p>
+                                </div>
+                            </li>
+                            <li class="service-item">
+                                <i class="fas fa-video" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Cámaras de seguridad (CCTV)</h4>
+                                    <p>Instalación de cámaras con grabación continua y monitoreo remoto desde el celular.</p>
+                                </div>
+                            </li>
+                            <li class="service-item">
+                                <i class="fas fa-wifi" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Wi-Fi y puntos de acceso (AP)</h4>
+                                    <p>Cobertura Wi-Fi estable en todo el edificio, con puntos de acceso pensados para muchos usuarios a la vez.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="loader-text">Estamos preparando una selección de nuestros mejores proyectos...</p>
-                <span class="status-tag">Próximamente</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contacto" class="section-padding">
-        <div class="container" style="text-align: center;">
-            <h2 class="section-title">¿Tienes un <span class="highlight">Proyecto?</span></h2>
-            <p class="contact-subtitle">Define tus requerimientos técnicos y hagámoslo realidad.</p>
-            <div class="contact-action">
-                <a href="#" class="btn-main" id="btn-iniciar-proyecto" style="text-decoration: none; display: inline-block;">
-                    <i class="fas fa-rocket"></i> Iniciar Proyecto
-                </a>
+        <section id="portafolio" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Proyectos</h2>
+                    <p>Algunos de los sistemas y sitios que hemos desarrollado.</p>
+                </header>
+
+                <!-- Las tarjetas se generan desde datos.js -->
+                <div class="showcases" id="projects-grid"></div>
+
+                <div class="projects-empty" id="projects-empty" hidden>
+                    <i class="fas fa-folder-open" aria-hidden="true"></i>
+                    <p>Estamos documentando nuestros proyectos más recientes. Escríbenos y te mostramos ejemplos de trabajos similares al tuyo.</p>
+                    <a href="#contacto" class="btn btn-ghost">Solicitar ejemplos</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div id="modal-consulta" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 class="section-title" style="font-size: 1.8rem;">Consultoría <span class="highlight">Técnica</span></h2>
-            <p class="loader-text" style="text-align: center; margin-bottom: 20px;">
-                Define los parámetros iniciales de tu proyecto.
-            </p>
-            
-            <form id="form-consulta">
-                <div class="form-group">
-                    <input type="text" placeholder="Nombre completo o Empresa" required>
+        <section id="nosotros" class="section">
+            <div class="container about">
+                <div class="about-text">
+                    <h2>Sobre DevStudio</h2>
+                    <p>
+                        DevStudio es el estudio de desarrollo e infraestructura.
+                        Trabajamos con empresas e instituciones que necesitan que su tecnología funcione completa:
+                        el sitio, el sistema interno, la red y la seguridad.
+                    </p>
+                    <p>
+                        Cada proyecto empieza entendiendo cómo trabaja tu equipo. Después proponemos una solución
+                        con alcance y tiempos claros, la construimos y te acompañamos después de la entrega.
+                    </p>
                 </div>
-                <div class="form-group">
-                    <input type="tel" id="tel-cliente" placeholder="Número de teléfono / WhatsApp" required pattern="[0-9]{8,15}">
+                <ol class="steps" aria-label="Cómo trabajamos">
+                    <li><span class="step-n">1</span><div><h3>Diagnóstico</h3><p>Conversamos sobre tu necesidad y revisamos lo que ya tienes.</p></div></li>
+                    <li><span class="step-n">2</span><div><h3>Propuesta</h3><p>Alcance, tiempos y costo por escrito, sin sorpresas.</p></div></li>
+                    <li><span class="step-n">3</span><div><h3>Desarrollo e instalación</h3><p>Avances visibles durante el proyecto para que valides cada etapa.</p></div></li>
+                    <li><span class="step-n">4</span><div><h3>Entrega y soporte</h3><p>Capacitación, documentación y soporte cuando lo necesites.</p></div></li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <div class="container contact">
+                <div class="contact-info">
+                    <h2>¿Tienes un proyecto?</h2>
+                    <p class="contact-lead">Cuéntanos qué necesitas y te respondemos con una propuesta.</p>
                 </div>
-                <div class="form-group">
-                    <select id="tipo-servicio" required>
-                        <option value="" disabled selected>Selecciona el área de ingeniería</option>
-                        <option value="web">Desarrollo Web / E-commerce</option>
-                        <option value="redes">Infraestructura de Redes</option>
-                        <option value="seguridad">Sistemas de Videovigilancia (CCTV)</option>
-                        <option value="academico">Gestión Académica (SIS)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Describe los requerimientos técnicos..." rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn-main" style="width: 100%;">Enviar Requerimientos</button>
-            </form>
+
+                <form id="form-consulta" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre o empresa</label>
+                            <input type="text" id="nombre" name="from_name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel-cliente">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-cliente" name="client_phone" autocomplete="tel" inputmode="tel" required pattern="[+0-9 ()\-]{8,20}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-cliente">Correo electrónico <span class="optional">(opcional)</span></label>
+                        <input type="email" id="email-cliente" name="client_email" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-servicio">Servicio</label>
+                        <select id="tipo-servicio" name="service_type" required>
+                            <option value="" disabled selected>Selecciona un servicio</option>
+                            <option>Desarrollo web</option>
+                            <option>E-commerce</option>
+                            <option>Sistema a medida / gestión académica (SIS)</option>
+                            <option>Redes estructuradas</option>
+                            <option>Cámaras de seguridad (CCTV)</option>
+                            <option>Wi-Fi y puntos de acceso (AP)</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">¿Qué necesitas?</label>
+                        <textarea id="mensaje" name="message" rows="4" required placeholder="Ej.: Necesito una tienda en línea para unos 200 productos, con pagos con tarjeta."></textarea>
+                    </div>
+                    <p class="form-error" id="form-error" role="alert" hidden></p>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="#inicio" class="nav-brand footer-brand"><b>DEV</b><span>STUDIO</span></a>
+            <p>© <span id="year">2026</span> DevStudio. Todos los derechos reservados.</p>
+            <ul class="footer-social" id="footer-social"></ul>
         </div>
+    </footer>
+
+    <!-- Visor de capturas de proyectos -->
+    <dialog id="lightbox" class="lightbox" aria-label="Capturas del proyecto">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+        <figure class="lightbox-figure">
+            <img id="lightbox-img" src="" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Captura anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+        <button class="lightbox-nav next" id="lightbox-next" aria-label="Captura siguiente"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite">
+        <i class="fas fa-circle-check" id="toast-icon" aria-hidden="true"></i>
+        <p id="toast-message"></p>
     </div>
 
-    <div id="custom-notification" class="notification-toast">
-        <div class="notification-content">
-            <i class="fas fa-check-circle"></i>
-            <p id="notification-message"></p>
-        </div>
-    </div>
+    <a class="whatsapp-float" id="whatsapp-float" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" hidden>
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <script src="datos.js"></script>
     <script src="main.js"></script>
-
-    <div id="service-modal" class="service-modal">
-        <div class="service-modal-content">
-            <span class="close-service">&times;</span>
-            <div id="modal-body-content">
-                </div>
-        </div>
-    </div>
 </body>
 </html>
