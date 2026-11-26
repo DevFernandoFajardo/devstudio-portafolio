@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
         : '';
 
     const channels = [
-        waLink && { icon: 'fab fa-whatsapp', label: 'WhatsApp', value: formatPhone(c.whatsapp), href: waLink },
+        waLink && { icon: 'fab fa-whatsapp', label: 'WhatsApp', value: 'Escríbenos por WhatsApp', href: waLink },
         c.email && { icon: 'fas fa-envelope', label: 'Correo', value: c.email, href: `mailto:${c.email}` },
         c.linkedin && { icon: 'fab fa-linkedin', label: 'LinkedIn', value: 'Ver perfil', href: c.linkedin },
         c.github && { icon: 'fab fa-github', label: 'GitHub', value: c.github.replace(/^https?:\/\/(www\.)?github\.com\//, '').replace(/\/$/, ''), href: c.github }
