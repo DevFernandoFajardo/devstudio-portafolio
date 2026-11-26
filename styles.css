@@ -243,7 +243,7 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; text-wrap: balance; }
         linear-gradient(to bottom, transparent 70%, var(--bg) 100%);
 }
 
-.hero-text { max-width: 860px; }
+.hero-text { max-width: 860px; min-width: 0; width: 100%; }
 
 .hero h1 {
     font-size: clamp(1.95rem, 5.2vw, 3.8rem);
@@ -544,23 +544,9 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; text-wrap: balance; }
 .projects-empty p { color: var(--muted); max-width: 46ch; }
 
 /* --- 7b. CERTIFICACIONES Y TECNOLOGÍAS --- */
-/* Franja de certificaciones que se desplaza sola */
-.cert-band {
-    padding: 28px 0 36px;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
-    scroll-margin-top: 70px;
-}
-.cert-band[hidden] { display: none; }
-.cert-band-label {
-    text-align: center;
-    margin-bottom: 18px;
-    color: var(--muted);
-    font-size: 0.78rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-}
+/* Franja de logos dentro de la portada */
+.hero-marquee { margin: 22px auto 0; width: min(760px, 92vw); }
+.hero-marquee[hidden] { display: none; }
 .marquee {
     overflow: hidden;
     -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
@@ -569,9 +555,9 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; text-wrap: balance; }
 .marquee-track {
     display: flex;
     align-items: center;
-    gap: clamp(40px, 6vw, 72px);
+    gap: 52px;
     width: max-content;
-    padding-right: clamp(40px, 6vw, 72px);
+    padding-right: 52px;
     animation: marquee 32s linear infinite;
 }
 .marquee:hover .marquee-track,
@@ -579,11 +565,11 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; text-wrap: balance; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 .marquee-item { flex-shrink: 0; }
-.cert-logo { display: flex; align-items: center; height: 84px; transition: transform 0.25s var(--ease), opacity 0.25s; opacity: 0.9; }
+.cert-logo { display: flex; align-items: center; height: 42px; transition: transform 0.25s var(--ease), opacity 0.25s; opacity: 0.9; }
 .cert-logo:hover { transform: scale(1.08); opacity: 1; }
-.cert-logo img { height: 100%; width: auto; }
-.cert-logo-text { gap: 12px; font-size: 1.5rem; font-weight: 600; color: var(--text); }
-.cert-logo-text i { font-size: 2.6rem; color: #61dafb; }
+.cert-logo img { height: var(--alto, 100%); width: auto; }
+.cert-logo-text { gap: 10px; font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; color: var(--text); }
+.cert-logo-text img { height: 80%; }
 
 .tech-groups {
     display: grid;
@@ -1025,6 +1011,11 @@ option { background: var(--bg); color: var(--text); }
 
 @media (max-width: 560px) {
     .container { padding: 0 20px; }
+    .hero-marquee { margin-top: 16px; width: min(360px, 90vw); }
+    .marquee-track { gap: 34px; padding-right: 34px; }
+    .cert-logo { height: 26px; }
+    .cert-logo img { height: calc(var(--alto, 42px) * 0.62); }
+    .cert-logo-text { font-size: 0.95rem; gap: 7px; }
     .nav-brand { font-size: 1.35rem; }
 
     .hero { padding: calc(var(--nav-h) + 24px) 20px 72px; }

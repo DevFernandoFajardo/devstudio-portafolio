@@ -26,12 +26,13 @@ const PERFIL = {
    titulo: detalle que aparece al pasar el mouse | enlace: URL de verificación (opcional)
    Certificaciones: Cisco CCNA: Switching, Routing, and Wireless Essentials; Cisco Python Essentials 1;
    Fortinet Certified Associate Cybersecurity; Fortinet NSE 3; FortiGate 7.6 Operator;
-   AWS Cloud Practitioner Essentials; React. */
+   AWS Cloud Practitioner Essentials. */
 const CERTIFICACIONES = [
-    { logo: 'img/logos/cisco.svg',    alto: 104, nombre: '',         titulo: 'Cisco: CCNA Switching, Routing & Wireless Essentials · Python Essentials 1', enlace: '' },
+    { logo: 'img/logos/cisco.svg',    alto: 78, nombre: '',         titulo: 'Cisco: CCNA Switching, Routing & Wireless Essentials · Python Essentials 1', enlace: '' },
     { logo: 'img/logos/fortinet.svg', nombre: 'Fortinet', titulo: 'Fortinet: Certified Associate Cybersecurity · NSE 3 · FortiGate 7.6 Operator', enlace: '' },
     { logo: 'img/logos/aws.png',      nombre: '',         titulo: 'AWS Cloud Practitioner Essentials', enlace: '' },
-    { logo: 'img/logos/react.svg',    nombre: 'React',    titulo: 'React', enlace: '' }
+    { logo: 'img/logos/sqlserver.svg', nombre: 'SQL Server', titulo: 'Microsoft SQL Server', enlace: '' },
+    { logo: 'img/logos/oracle.svg',    nombre: 'Oracle',    titulo: 'Oracle', enlace: '' }
 ];
 
 /* --- TECNOLOGÍAS --- agrupadas; agrega o quita las que uses */

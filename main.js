@@ -268,6 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = c.logo;
             img.alt = hidden ? '' : (c.nombre || c.titulo);
             img.decoding = 'async';
+            if (c.alto) img.style.setProperty('--alto', `${c.alto}px`);
             inner.appendChild(img);
             if (c.nombre) {
                 inner.classList.add('cert-logo-text');
@@ -280,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
         certs.forEach(c => certTrack.appendChild(build(c, false)));
         certs.forEach(c => certTrack.appendChild(build(c, true)));
     } else if (certTrack) {
-        document.getElementById('certificaciones').hidden = true;
+        document.getElementById('hero-certs').hidden = true;
     }
 
     const techs = (typeof TECNOLOGIAS !== 'undefined' && Array.isArray(TECNOLOGIAS)) ? TECNOLOGIAS : [];
