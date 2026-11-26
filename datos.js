@@ -14,12 +14,6 @@ const CONTACTO = {
     mensajeWhatsapp: 'Hola, vi su página y me interesa cotizar un proyecto.'
 };
 
-/* --- PERFIL ---  */
-const PERFIL = {
-    nombre: 'Fernando Fajardo',
-    cargo: 'Ingeniero en Sistemas · Full Stack Developer'
-};
-
 /* --- CERTIFICACIONES ---
    Franja de logos de las marcas que te certifican; se desplaza sola.
    logo: archivo en img/logos/ | alto: tamaño en px (opcional, para agrandar o achicar un logo) | nombre: texto junto al logo (vacío si el logo ya trae el nombre)
