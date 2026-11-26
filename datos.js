@@ -14,6 +14,34 @@ const CONTACTO = {
     mensajeWhatsapp: 'Hola, vi su página y me interesa cotizar un proyecto.'
 };
 
+/* --- PERFIL ---  */
+const PERFIL = {
+    nombre: 'Fernando Fajardo',
+    cargo: 'Ingeniero en Sistemas · Full Stack Developer'
+};
+
+/* --- CERTIFICACIONES ---
+   Franja de logos de las marcas que te certifican; se desplaza sola.
+   logo: archivo en img/logos/ | alto: tamaño en px (opcional, para agrandar o achicar un logo) | nombre: texto junto al logo (vacío si el logo ya trae el nombre)
+   titulo: detalle que aparece al pasar el mouse | enlace: URL de verificación (opcional)
+   Certificaciones: Cisco CCNA: Switching, Routing, and Wireless Essentials; Cisco Python Essentials 1;
+   Fortinet Certified Associate Cybersecurity; Fortinet NSE 3; FortiGate 7.6 Operator;
+   AWS Cloud Practitioner Essentials; React. */
+const CERTIFICACIONES = [
+    { logo: 'img/logos/cisco.svg',    alto: 104, nombre: '',         titulo: 'Cisco: CCNA Switching, Routing & Wireless Essentials · Python Essentials 1', enlace: '' },
+    { logo: 'img/logos/fortinet.svg', nombre: 'Fortinet', titulo: 'Fortinet: Certified Associate Cybersecurity · NSE 3 · FortiGate 7.6 Operator', enlace: '' },
+    { logo: 'img/logos/aws.png',      nombre: '',         titulo: 'AWS Cloud Practitioner Essentials', enlace: '' },
+    { logo: 'img/logos/react.svg',    nombre: 'React',    titulo: 'React', enlace: '' }
+];
+
+/* --- TECNOLOGÍAS --- agrupadas; agrega o quita las que uses */
+const TECNOLOGIAS = [
+    { grupo: 'Frontend',            items: ['React', 'JavaScript', 'HTML5', 'CSS3'] },
+    { grupo: 'Backend y lenguajes', items: ['Python'] },
+    { grupo: 'Nube',                items: ['AWS'] },
+    { grupo: 'Redes y seguridad',   items: ['Cisco', 'Fortinet', 'Wi-Fi / AP', 'CCTV'] }
+];
+
 /* --- PROYECTOS ---
    Para agregar uno nuevo, copia un bloque { ... } completo y cambia los datos.
    Las capturas van en la carpeta img/proyectos/ (respeta mayúsculas y minúsculas

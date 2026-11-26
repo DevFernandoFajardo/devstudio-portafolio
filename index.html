@@ -7,16 +7,16 @@
     <meta name="description" content="DevStudio desarrolla sitios web, tiendas en línea y sistemas a medida, e instala redes, Wi-Fi y cámaras de seguridad para empresas e instituciones.">
     <meta name="author" content="Fernando Fajardo">
     <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://devstudio-site.vercel.app/">
+    <link rel="canonical" href="https://www.sitedevstudio.com/">
 
     <!-- Vista previa al compartir el enlace (WhatsApp, LinkedIn, Facebook) -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_LA">
     <meta property="og:site_name" content="DevStudio">
-    <meta property="og:title" content="DevStudio | Soluciones digitales">
+    <meta property="og:title" content="DevStudio | Desarrollo Full Stack e infraestructura de redes">
     <meta property="og:description" content="Sitios web, e-commerce, sistemas a medida e infraestructura de redes.">
-    <meta property="og:url" content="https://devstudio-site.vercel.app/">
-    <meta property="og:image" content="https://devstudio-site.vercel.app/img/og-image.png">
+    <meta property="og:url" content="https://www.sitedevstudio.com/">
+    <meta property="og:image" content="https://www.sitedevstudio.com/img/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
@@ -35,10 +35,15 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "DevStudio",
-        "url": "https://devstudio-site.vercel.app/",
-        "image": "https://devstudio-site.vercel.app/img/og-image.png",
+        "url": "https://www.sitedevstudio.com/",
+        "image": "https://www.sitedevstudio.com/img/og-image.png",
         "description": "Desarrollo web, e-commerce, sistemas a medida e infraestructura de redes.",
-        "founder": { "@type": "Person", "name": "Fernando Fajardo" }
+        "founder": {
+            "@type": "Person",
+            "name": "Fernando Fajardo",
+            "jobTitle": "Ingeniero en Sistemas y Full Stack Developer",
+            "knowsAbout": ["React", "JavaScript", "Python", "AWS", "Redes Cisco", "Fortinet", "Desarrollo web", "Infraestructura de redes"]
+        }
     }
     </script>
 </head>
@@ -57,6 +62,7 @@
                 <li><a href="#inicio" class="active">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#portafolio">Proyectos</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li class="nav-cta-item"><a href="#contacto" class="nav-cta">Cotizar proyecto</a></li>
             </ul>
@@ -76,8 +82,16 @@
                     <a href="#contacto" class="btn btn-primary">Cotizar proyecto</a>
                     <a href="#portafolio" class="btn btn-ghost">Ver proyectos</a>
                 </div>
+                <p class="hero-trust">Profesional certificado en<br><strong>Cisco</strong>, <strong>Fortinet</strong>, <strong>AWS</strong>…</p>
             </div>
             <a href="#servicios" class="scroll-cue" aria-label="Ir a servicios"><i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+        </section>
+
+        <section id="certificaciones" class="cert-band" aria-label="Certificaciones">
+            <p class="cert-band-label">Certificado por</p>
+            <div class="marquee">
+                <ul class="marquee-track" id="cert-track"></ul>
+            </div>
         </section>
 
         <section id="servicios" class="section">
@@ -163,13 +177,23 @@
             </div>
         </section>
 
+        <section id="tecnologias" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Tecnologías</h2>
+                    <p>Las herramientas con las que desarrollo, conecto y protejo cada proyecto.</p>
+                </header>
+                <div class="tech-groups" id="tech-groups"></div>
+            </div>
+        </section>
+
         <section id="nosotros" class="section">
             <div class="container about">
                 <div class="about-text">
                     <h2>Sobre DevStudio</h2>
                     <p>
-                        DevStudio es el estudio de desarrollo e infraestructura.
-                        Trabajamos con empresas e instituciones que necesitan que su tecnología funcione completa:
+                        DevStudio es el estudio de desarrollo e infraestructura de <strong>Fernando Fajardo</strong>,
+                        Ingeniero en Sistemas y Full Stack Developer. Trabajamos con empresas e instituciones que necesitan que su tecnología funcione completa:
                         el sitio, el sistema interno, la red y la seguridad.
                     </p>
                     <p>
@@ -218,7 +242,9 @@
             <div class="container contact">
                 <div class="contact-info">
                     <h2>¿Tienes un proyecto?</h2>
-                    <p class="contact-lead">Cuéntanos qué necesitas y te respondemos con una propuesta.</p>
+                    <p class="contact-lead">Cuéntanos qué necesitas y te respondemos con una propuesta clara, con alcance, tiempos y costo.</p>
+                    <ul class="contact-channels" id="contact-channels"></ul>
+                    <p class="contact-meta"><i class="fas fa-clock" aria-hidden="true"></i> Te respondemos lo antes posible.</p>
                 </div>
 
                 <form id="form-consulta" class="contact-form" novalidate>
@@ -255,6 +281,7 @@
                     </div>
                     <p class="form-error" id="form-error" role="alert" hidden></p>
                     <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+                    <p class="form-note"><i class="fas fa-lock" aria-hidden="true"></i> Tus datos se usan solo para responder tu solicitud y no se comparten con terceros.</p>
                 </form>
             </div>
         </section>
@@ -263,7 +290,8 @@
     <footer class="footer">
         <div class="container footer-inner">
             <a href="#inicio" class="nav-brand footer-brand"><b>DEV</b><span>STUDIO</span></a>
-            <p>© <span id="year">2026</span> DevStudio. Todos los derechos reservados.</p>
+            <p>© <span id="year">2026</span> DevStudio · Fernando Fajardo. Todos los derechos reservados.</p>
+            <ul class="footer-social" id="footer-social"></ul>
         </div>
     </footer>
 

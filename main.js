@@ -254,6 +254,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderProjects();
 
+    /* --- 5b. Certificaciones y tecnologías --- */
+    const certs = (typeof CERTIFICACIONES !== 'undefined' && Array.isArray(CERTIFICACIONES)) ? CERTIFICACIONES : [];
+    const certTrack = document.getElementById('cert-track');
+    if (certTrack && certs.length) {
+        const build = (c, hidden) => {
+            const li = el('li', 'marquee-item');
+            if (hidden) li.setAttribute('aria-hidden', 'true');
+            const inner = c.enlace ? el('a', 'cert-logo') : el('span', 'cert-logo');
+            if (c.enlace) { inner.href = c.enlace; inner.target = '_blank'; inner.rel = 'noopener'; if (hidden) inner.tabIndex = -1; }
+            inner.title = c.titulo;
+            const img = el('img');
+            img.src = c.logo;
+            img.alt = hidden ? '' : (c.nombre || c.titulo);
+            img.decoding = 'async';
+            inner.appendChild(img);
+            if (c.nombre) {
+                inner.classList.add('cert-logo-text');
+                inner.appendChild(el('span', '', c.nombre));
+            }
+            li.appendChild(inner);
+            return li;
+        };
+        // Se duplica la lista para que el desplazamiento sea continuo
+        certs.forEach(c => certTrack.appendChild(build(c, false)));
+        certs.forEach(c => certTrack.appendChild(build(c, true)));
+    } else if (certTrack) {
+        document.getElementById('certificaciones').hidden = true;
+    }
+
+    const techs = (typeof TECNOLOGIAS !== 'undefined' && Array.isArray(TECNOLOGIAS)) ? TECNOLOGIAS : [];
+    const techBox = document.getElementById('tech-groups');
+    if (techBox) {
+        techs.forEach(g => {
+            const group = el('div', 'tech-group');
+            group.appendChild(el('h3', '', g.grupo));
+            const ul = el('ul', 'tech-tags');
+            (g.items || []).forEach(t => ul.appendChild(el('li', '', t)));
+            group.appendChild(ul);
+            techBox.appendChild(group);
+        });
+    }
+
     /* --- 6. Visor de capturas --- */
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lightbox-img');

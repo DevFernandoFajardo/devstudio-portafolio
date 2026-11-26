@@ -4,7 +4,7 @@ Bienvenido al repositorio oficial de **DevStudio**. Aquí se encuentra el códig
 
 ## 🌐 Sitio en vivo
 
-Puedes visitar la web aquí: [sitedevstudio.com](https://www.sitedevstudio.com/)
+Puedes visitar la web aquí: [www.sitedevstudio.com](https://www.sitedevstudio.com/)
 
 ## 🛠️ Servicios ofrecidos
 
@@ -59,7 +59,7 @@ Puedes visitar la web aquí: [sitedevstudio.com](https://www.sitedevstudio.com/)
 - [x] Formulario de contacto con validación.
 - [x] Sección de proyectos con capturas.
 - [x] Botón de contacto por WhatsApp.
-- [ ] Dominio propio.
+- [x] Dominio propio.
 - [ ] Sección de blog para artículos técnicos.
 - [ ] Optimización de carga de imágenes (WebP).
 
