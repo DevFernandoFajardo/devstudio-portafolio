@@ -51,6 +51,18 @@ const TECNOLOGIAS = [
    - Si la lista queda vacía, la sección muestra un mensaje de "en preparación".   */
 const PROYECTOS = [
     {
+        titulo: 'Menú Digital con Código QR · Restaurante',
+        color: '#f4a340',
+        categoria: 'Sitio web · Restaurantes',
+        descripcion: 'Menú digital para un restaurante al que los clientes entran escaneando un código QR con la cámara del teléfono, sin instalar nada. Incluye buscador de platillos y categorías (mariscos, ceviches, aguachiles, para picar y más), con un diseño pensado para verse bien en el celular.',
+        tecnologias: [],
+        imagenes: [
+            { src: 'img/proyectos/MenuElVeleroWeb.jpg', pie: 'Menú web con buscador y categorías, listo para consultarse desde cualquier teléfono.' },
+            { src: 'img/proyectos/MenuElVeleroQR.jpg', pie: 'Material con código QR: el cliente lo escanea y accede al menú al instante.' }
+        ],
+        enlace: 'https://elvelerogt.com'
+    },
+    {
         titulo: 'Sistema de Gestión para Sanatorio Médico',
         color: '#2bb3c9',
         categoria: 'Sistema web y aplicación móvil · Salud',
