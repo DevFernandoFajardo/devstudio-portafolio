@@ -54,7 +54,7 @@ const PROYECTOS = [
         titulo: 'Menú Digital con Código QR · Restaurante',
         color: '#f4a340',
         categoria: 'Sitio web · Restaurantes',
-        descripcion: 'Menú digital para un restaurante al que los clientes entran escaneando un código QR con la cámara del teléfono, sin instalar nada. Incluye buscador de platillos y categorías.',
+        descripcion: 'Menú digital para un restaurante al que los clientes entran escaneando un código QR. Incluye buscador de platillos y categorías.',
         tecnologias: [],
         imagenes: [
             { src: 'img/proyectos/MenuElVeleroWeb.jpg', pie: 'Menú web con buscador y categorías, listo para consultarse desde cualquier teléfono.' },
